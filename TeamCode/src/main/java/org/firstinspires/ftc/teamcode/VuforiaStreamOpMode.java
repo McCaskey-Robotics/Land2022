@@ -3,6 +3,8 @@ package org.firstinspires.ftc.teamcode;
 import com.acmerobotics.dashboard.FtcDashboard;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.util.Range;
+import com.qualcomm.robotcore.util.RobotLog;
 
 import org.firstinspires.ftc.robotcore.external.ClassFactory;
 import org.firstinspires.ftc.robotcore.external.navigation.VuforiaLocalizer;
@@ -14,7 +16,6 @@ import org.firstinspires.ftc.robotcore.external.navigation.VuforiaLocalizer;
  */
 @Autonomous
 public class VuforiaStreamOpMode extends LinearOpMode {
-
     // TODO: fill in
     public static final String VUFORIA_LICENSE_KEY = "AY2/Abz/////AAABmRiO7MLRC0KDvnef+RFVZBpppJ3+LKlP8nhpBndIeCprKByTKnhCOsWOit5Ode+yJPeTV6+YpcLkjkl2HYtIEaEJ3Uz4zjxfpJAXpUE//y/qg5XyFkvH+vIt1jdFi4exZ8JhS78iwq4G28aZRyf0H9P7lWOCPg6qaWNIAiY6w/LIRg0KvPM4FBYqftio4dTHs6NXpvq7rNe91r5Y/Q35bqzONSElj9n8jvxic7AdOe9Z8eG/bXwUnyjqPFsRV+tTmI5tQ1obW7Q356NmRvKEI0V29G2NoqCsejorhWk8TKRRl71ipz2x/pT98HIHe32Pz8IgkPfQI249ykGeUl5Uoc8hxLChMMUY9cTF9Dq/5BFD";
 
