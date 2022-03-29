@@ -62,6 +62,7 @@ public class ADriverControled extends LinearOpMode {
         waitForStart();
 
         while (!isStopRequested()) {
+            //drive
             drive.setWeightedDrivePower(
                     new Pose2d(
                             -gamepad1.left_stick_y / 2,
@@ -71,23 +72,33 @@ public class ADriverControled extends LinearOpMode {
             );
             drive.update();
 
-
-            if (gamepad1.dpad_up) {
+            //claw
+            if (gamepad1.dpad_left) {
                 clawPosition += 0.01;
             }
-            if (gamepad1.dpad_down) {
+            if (gamepad1.dpad_right) {
                 clawPosition -= 0.01;
             }
-
             clawPosition = Math.min(1,clawPosition);
             clawPosition = Math.max(0,clawPosition);
-
             claw.setPosition(clawPosition);
-            lift.setPower(gamepad1.right_stick_x);
+
+            //lift
+            if (gamepad1.dpad_up) {
+                lift.setPower(0.5);
+            }
+            else if (gamepad1.dpad_right) {
+                lift.setPower(-0.5);
+            }
+            else{
+                lift.setPower(0);
+            }
 
             packet.put("gamepad", gamepad1);
 
             packet.put("type", gamepad1.type());
+
+            packet.put("claw", clawPosition);
 
             dashboard.sendTelemetryPacket(packet);
 
