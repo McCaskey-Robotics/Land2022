@@ -84,10 +84,10 @@ public class ADriverControled extends LinearOpMode {
             claw.setPosition(clawPosition);
 
             //lift
-            if (gamepad1.dpad_up) {
+            if (gamepad1.y) {
                 lift.setPower(0.5);
             }
-            else if (gamepad1.dpad_right) {
+            else if (gamepad1.x) {
                 lift.setPower(-0.5);
             }
             else{
